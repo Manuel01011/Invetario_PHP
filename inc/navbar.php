@@ -22,9 +22,9 @@
                 <a class="navbar-link"> Usuario </a>
 
                 <div class="navbar-dropdown">
-                <a class="navbar-item"> Crear </a>
-                <a class="navbar-item"> Listar </a>
-                <a class="navbar-item"> Buscar </a>
+                <a class="navbar-item" href="index.php?Vista=user_new"> Crear </a>
+                <a class="navbar-item" href="index.php?Vista=user_list"> Listar </a>
+                <a class="navbar-item" href="index.php?Vista=user_search"> Buscar </a>
                 </div>
             </div>
 
