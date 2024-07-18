@@ -46,12 +46,12 @@
 
         }else{
             echo '  <div class="notification is-danger is-light">
-            <strong>¡Usuario o clave incorrectos 1!</strong>
+            <strong>¡Usuario o clave incorrectos!</strong>
             </div>';
         }
     }else{
          echo '  <div class="notification is-danger is-light">
-        <strong>¡Usuario o clave incorrectos2!</strong>
+        <strong>¡Usuario o clave incorrectos!</strong>
         </div>';
     }
     $check_user = null;

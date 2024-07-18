@@ -59,7 +59,7 @@
           <a class="button is-primary is-rounded">
             Login
           </a>
-          <a class="button is-link is-rounded">
+          <a href="index.php?Vista=logout" class="button is-link is-rounded">
              logout
           </a>
         </div>
