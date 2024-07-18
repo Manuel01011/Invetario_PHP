@@ -3,9 +3,6 @@
     <a class="navbar-item" href="index.php?Vista=home">
         <img src="./img/12201509.png" width="65" height="35">
     </a>
-</svg>
-
-    </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
