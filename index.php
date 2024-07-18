@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!--video 20-->
+<!--video -->
 
 <?php 
     if(!isset($_GET['Vista']) || $_GET['Vista'] == ""){
