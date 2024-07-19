@@ -4,16 +4,11 @@
     $table="";
     if(isset($busqueda) && $busqueda!=""){
 
-        $consulta="SELECT * FROM usuario WHERE ((usuario_id != '".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%'
-        OR (usuario_apellido LIKE '%$busqueda%' OR (usuario_usuario LIKE '%$busqueda%'
-        OR (usuario_email LIKE '%$busqueda%')) ORDER BY usuario_nombre ASC LIMIT $inicio, $registros";
+        $consulta="SELECT * FROM usuario WHERE ((usuario_id != '".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%' OR usuario_apellido LIKE '%$busqueda%' OR usuario_usuario LIKE '%$busqueda%' OR usuario_email LIKE '%$busqueda%')) ORDER BY usuario_nombre ASC LIMIT $inicio, $registros";
         
-        $consulta_Total="SELECT COUNT(usuario_id) FROM usuario WHERE
-        ((usuario_id != '".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%'
-        OR (usuario_apellido LIKE '%$busqueda%' OR (usuario_usuario LIKE '%$busqueda%'
-        OR (usuario_email LIKE '%$busqueda%'))";
+        $consulta_Total="SELECT COUNT(usuario_id) FROM usuario WHERE ((usuario_id != '".$_SESSION['id']."') AND (usuario_nombre LIKE '%$busqueda%' OR usuario_apellido LIKE '%$busqueda%' OR usuario_usuario LIKE '%$busqueda%' OR usuario_email LIKE '%$busqueda%'))";
 
-    }else{
+    } else {
         $consulta="SELECT * FROM usuario WHERE usuario_id != '".$_SESSION['id']."' ORDER BY usuario_nombre ASC LIMIT $inicio, $registros";
         
         $consulta_Total="SELECT COUNT(usuario_id) FROM usuario WHERE usuario_id != '".$_SESSION['id']."'";
@@ -22,6 +17,7 @@
     $conexion=conexion();
     $datos=$conexion->query($consulta);
     $datos= $datos->fetchAll(); 
+
     $total=$conexion->query($consulta_Total);
     $total=(int) $total->fetchColumn();
 
@@ -62,13 +58,12 @@
                             <a href="'.$url.$pagina.'&user_id_del='.$elementos['usuario_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
                         </td>
                 </tr>
-
             ';
             $count++;
         }
         $pagina_final=$count-1;
 
-    }else{
+    } else {
         if($total>=1){
             $table.='
                  <tr class="has-text-centered" >
@@ -79,7 +74,7 @@
                     </td>
                 </tr>
             ';
-        }else{
+        } else {
             $table.='
                 <tr class="has-text-centered" >
                     <td colspan="7">
@@ -105,7 +100,6 @@
     
     if($total>=1 && $pagina<=$Npaginas){
          echo paginador_tablas($pagina,$Npaginas,$url,7);
-
     }
 
     $conexion=null;
