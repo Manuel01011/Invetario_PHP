@@ -53,8 +53,8 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary is-rounded">
-            Login
+          <a href="index.php?Vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" class="button is-primary is-rounded">
+            Mi cuenta
           </a>
           <a href="index.php?Vista=logout" class="button is-link is-rounded">
              logout

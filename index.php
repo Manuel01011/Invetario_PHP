@@ -1,4 +1,4 @@
-<?php require "./inc/login.php"; ?>
+<?php require "./inc/session.php"; ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!--video 27-->
+<!--video -->
 
 <?php 
     if(!isset($_GET['Vista']) || $_GET['Vista'] == ""){
