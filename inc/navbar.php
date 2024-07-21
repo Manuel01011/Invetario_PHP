@@ -30,9 +30,9 @@
                 <a class="navbar-link"> Categoria </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item"> Crear </a>
-                    <a class="navbar-item"> Listar </a>
-                    <a class="navbar-item"> Buscar </a>
+                    <a class="navbar-item" href="index.php?Vista=category_new"> Crear </a>
+                    <a class="navbar-item" href="index.php?Vista=category_list"> Listar </a>
+                    <a class="navbar-item" href="index.php?Vista=category_search"> Buscar </a>
                 </div>
 
             </div>
