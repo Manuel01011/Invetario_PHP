@@ -41,10 +41,10 @@
                 <a class="navbar-link"> Productos </a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item"> Crear </a>
-                    <a class="navbar-item"> Listar </a>
-                    <a class="navbar-item"> Por Categoria </a>
-                    <a class="navbar-item"> Buscar </a>
+                    <a class="navbar-item" href="index.php?Vista=product_new"> Crear </a>
+                    <a class="navbar-item" href="index.php?Vista=product_list"> Listar </a>
+                    <a class="navbar-item" href="index.php?Vista=product_category"> Por Categoria </a>
+                    <a class="navbar-item" href="index.php?Vista=product_search"> Buscar </a>
                 </div>
             </div>
         </div>
