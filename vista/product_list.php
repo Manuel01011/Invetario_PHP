@@ -8,10 +8,10 @@
 <?php
         require_once "./php/main.php";
         
-        //eliminar categoria
-      //  if(isset($_GET['category_id_del'])){
-      //       require_once "./php/producto_eliminar.php";
-      //  }
+      //  eliminar producto
+        if(isset($_GET['product_id_del'])){
+            require_once "./php/producto_eliminar.php";
+        }
 
         if(!isset($_GET['page'])){
             $pagina = 1;
