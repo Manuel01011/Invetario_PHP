@@ -19,7 +19,7 @@
     }elseif($categoria_id>0){
 
         $consulta="SELECT $campos FROM producto inner join categoria on producto.categoria_id=categoria.categoria_id
-        inner join usuario on producto.usuario_id=usuario.usuario_id WHERE producto.categoria_id='$categoria_id' ORDER BY producto.producto.nombre ASC LIMIT $inicio, $registros";
+        inner join usuario on producto.usuario_id=usuario.usuario_id WHERE producto.categoria_id='$categoria_id' ORDER BY producto.producto_nombre ASC LIMIT $inicio, $registros";
         
         $consulta_Total="SELECT COUNT(producto_id) FROM producto WHERE categoria_id='$categoria_id'";
 
